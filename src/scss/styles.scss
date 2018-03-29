@@ -1,0 +1,61 @@
+// Variable Overrides 
+
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+$bg-color: red;
+$hm-color: #D98036;
+
+body {
+  // background: $bg-color;
+}
+
+.jumbotron {
+  background-color: white;
+}
+.jumbotron-video{
+  position: relative;
+    overflow: hidden;
+    min-height: 1000px;
+
+  /* Tried setting the height. Didnt work either */
+  /* height: 200px; */
+}
+
+.welcome-container {
+  position: relative;
+  color: #ffffff;
+  z-index: 2;
+}
+
+#video-background{ 
+  position: absolute;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+}
+
+.btn-custom {
+  background-color: $hm-color;
+  color: white;
+}
+
+.hmlet-color {
+  color: $hm-color;
+}
+
+.white {
+  color: white;
+}
+
+footer {
+  color: White;
+  background-color: $hm-color;
+}
