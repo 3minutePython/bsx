@@ -1,23 +1,43 @@
+
+$bg-color: red;
+$hm-color: #D98036;
+
+
 // Variable Overrides 
+// Variable Overrides 
+
+$enable-rounded:   false;
+
+$theme-colors: (
+  // "primary": #d95700
+  "primary": $hm-color,
+  "secondary": #F3F4F1 
+);
+
+$body-bg: #ededed;
+
+.jumbotron {
+    background-color: #ffffff !important;
+    border-top: 3px solid rgb(219, 219, 219);
+}
 
 // Bootstrap Sass Imports
 @import "node_modules/bootstrap/scss/bootstrap";
 
 
-$bg-color: red;
-$hm-color: #D98036;
-
 body {
-  // background: $bg-color;
+  background: white;
 }
 
 .jumbotron {
   background-color: white;
+  // position: relative;
 }
 .jumbotron-video{
   position: relative;
     overflow: hidden;
-    min-height: 1000px;
+    // min-height: 1000px;
+    height: 100vh;
 
   /* Tried setting the height. Didnt work either */
   /* height: 200px; */
@@ -25,9 +45,65 @@ body {
 
 .welcome-container {
   position: relative;
-  color: #ffffff;
+  // color: #ffffff;
   z-index: 2;
 }
+
+.arrow {
+  position: absolute;
+  bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  // margin-top: 50%
+  // margin-top: calc(100vh - 220)
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+}
+
 
 #video-background{ 
   position: absolute;
@@ -42,20 +118,12 @@ body {
   z-index: 1;
 }
 
-.btn-custom {
-  background-color: $hm-color;
-  color: white;
-}
+.bottom{
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 
-.hmlet-color {
-  color: $hm-color;
-}
-
-.white {
-  color: white;
-}
-
-footer {
-  color: White;
-  background-color: $hm-color;
 }
